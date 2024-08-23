@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enchanted Emporium</title>
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootswatch@5.3/dist/pulse/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+
+
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <img src="images/logo.png" width="50px" style="margin-right: 30px">
+        </li>
+        <li class="nav-item">
+          <h1 class="nav-link" id="homepagebutton">Home</h1>
+        </li>
+        <li class="nav-item">
+          <h1 class="nav-link" id="aboutbutton">About</h1>
+        </li>
+        <li class="nav-item">
+          <h1 class="nav-link" id="searchbutton">Search</h1>
+        </li>
+        <li class="nav-item">
+          <h1 class="nav-link" id="analyticsbutton">Analytics</h1>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br><br>
+
+  <div class="container text-center" id="homepage">
+
+    <img src="images/logo.png" width="500px">
+    <div class="d-grid gap-2">
+      <button class="btn btn-lg btn-primary" type="button" style="width: 200px; margin: auto;"
+        id="searchbutton2">Search</button>
+    </div>
+    <br>
+    <h3 style="color: white;">Top Rated Product:</h3>
+    <table class="table table-hover">
+      <tbody id="topitemtable">
+
+        <tr class="itemtoselect" item="the id">
+          <td><img src="images/logo.png" width="100px" height="100px" /></td>
+          <th scope="row" valign="middle">Title</th>
+          <td valign="middle">
+            <ul style="list-style: none;">
+              <li><span class="badge rounded-pill bg-info">Tag 1</span></li>
+              <li><span class="badge rounded-pill bg-info">Tag 2</span></li>
+            </ul>
+          </td>
+          <td valign="middle">Avg Rating</td>
+          <td valign="middle">$Price</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container text-center" id="aboutpage" style="display: none;">
+    <div class="card text-white bg-secondary mb-3" style="width: 400px; margin:auto">
+
+      <div class="card-body">
+        <h4 class="card-title">About Us</h4>
+        <p class="card-text">In the desperate times of finals and midterms, students might find themselves in need of
+          something supernatural to get through their studies.
+          That’s why we created a special addition to our university website: the UW Magical Store. Here, students can
+          find the help they need, including time-turners
+          to revisit those missed study sessions, enchanted quills that never tire, potions that boost memory, crystal
+          balls for instant insights, and spell books that
+          make even the toughest subjects easier to understand. Our store is designed to provide students with the
+          magical tools they need to succeed when it matters most.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container text-center" id="searchpage" style="display: none;">
+    <table class="table table-hover">
+
+      <nav class="navbar navbar-expand-lg bg-secondary" data-bs-theme="dark">
+        <div class="container-fluid">
+
+          <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+              <li style="margin: auto;">
+                Sort By:
+              </li>
+              <li style="margin-right: 20px;">
+                <div class="btn-group" role="group" aria-label="Basic radio toggle button group">
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked=""
+                    sort="sortbyrating">
+                  <label class="btn btn-outline-dark" for="btnradio1">Rating</label>
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio2" autocomplete="off" checked=""
+                    sort="sortbyhighestprice">
+                  <label class="btn btn-outline-dark" for="btnradio2">Highest Price</label>
+                  <input type="radio" class="btn-check" name="btnradio" id="btnradio3" autocomplete="off" checked=""
+                    sort="sortbylowestprice">
+                  <label class="btn btn-outline-dark" for="btnradio3">Lowest Price</label>
+                </div>
+              </li>
+              <li>
+                <input class="form-control me-sm-2" type="search" placeholder="Search By Name" id="namesearchbar">
+              </li>
+              <li style="margin-right: 20px;">
+                <button class="btn btn-secondary my-2 my-sm-0" id="namesearchbutton">Search</button>
+              </li>
+              <li>
+                <input class="form-control me-sm-2" type="search" placeholder="Search By Tags" id="tagsearchbar">
+              </li>
+              <li style="margin-right: 20px;">
+                <button class="btn btn-secondary my-2 my-sm-0" id="tagsearchbutton">Search</button>
+              </li>
+              <li style="margin: auto;">
+                Showing Items <span id="searchrange">1-5</span>
+              </li>
+              <li style="margin-left: 10px;">
+                <button class="btn btn-secondary my-2 my-sm-0" id="leftbutton">&lt;</button>
+              </li>
+              <li>
+                <button class="btn btn-secondary my-2 my-sm-0" id="rightbutton">&gt;</button>
+              </li>
+            </ul>
+
+          </div>
+        </div>
+      </nav>
+      <tbody id="searchtable">
+
+        <tr class="itemtoselect" item="the id">
+          <td><img src="images/logo.png" width="100px" height="100px" /></td>
+          <th scope="row" valign="middle">Title</th>
+          <td valign="middle">
+            <ul style="list-style: none;">
+              <li><span class="badge rounded-pill bg-info">Tag 1</span></li>
+              <li><span class="badge rounded-pill bg-info">Tag 2</span></li>
+            </ul>
+          </td>
+          <td valign="middle">Avg Rating</td>
+          <td valign="middle">$Price</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+
+  <div class="container" id="itempage" style="background-color: white; overflow-y: auto; display: none;">
+    <img src="images/logo.png" style="float: right; margin: 15px;" id="itemimage" width="600px" height="600px" />
+    <div style="margin: 15px;">
+      <button class="btn btn-primary" type="button" style="margin: 10px;" id="backbutton">Back</button>
+      <br>
+      <h1 id="itemname">Item Name</h1>
+      <ul style="list-style: none; display: inline-block" id="itemtags">
+        <li><span class="badge rounded-pill bg-info">Tag 1</span></li>
+        <li><span class="badge rounded-pill bg-info">Tag 2</span></li>
+      </ul>
+      <p id="itemdesc">
+        Item Description...
+      </p>
+      <hr>
+      <h2>Price: $<span id="itemprice"></span></h2>
+      <button class="btn btn-primary" type="button" style="margin: 10px;">Buy Now</button>
+      <br><br>
+      <hr>
+      <h2>Reviews</h2>
+      <br>
+      <ul style="list-style: none;" id="itemreviews">
+        <li>
+          <h3 style="color: #fbc700;">&#9733;&#9733;&#9733;&#9733;&#9733;</h3>
+          <p>Review Text...</p>
+          <br>
+        </li>
+        <li>
+          <h3 style="color: #fbc700;">&#9733;&#9733;&#9733;</h3>
+          <p>Review Text...</p>
+          <br>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+
+  <div class="container text-center" id="analyticspage" style="background-color: white; display: none;">
+    <h1>Analytics</h1>
+    
+    <div style="margin: 20px; display: flex; align-items: center; justify-content: center;">
+      <select class="form-select" id="analyticsselect" style="max-width: 300px;">
+        <option graph="bestselling">Top 10 Best Selling Products</option>
+        <option graph="mostrevenue">Top 10 Products by Revenue</option>
+        <option graph="customerstotal">Top 10 Customers by Total Spent</option>
+      </select>
+    </div>
+    
+  <div style="margin: 20px; display: flex; align-items: center; justify-content: center;">
+    <canvas id="myChart" style="max-width: 800px; display: flex; justify-content: center;"></canvas>
+  </div>
+
+      
+  </div>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="code.js"></script>
+</body>
+
+</html>
